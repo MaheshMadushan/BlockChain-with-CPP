@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
+#include "md5.h"
 #include <ctime>
 
 using namespace std;
-
 
 class Block
 {
@@ -24,16 +24,24 @@ class Block
 			cout << "block " << index << " created " << time_stamp << endl;
 		}
 		
+		// constructor
 		Block(string i_previous_hash)
 		{
 			// allcate mem dynamically to hash n previous_hash
 			hash = new string;
 			previous_hash = new string;
-			index++;
 			this->time_stamp = time(0);
+			index++;
 			*previous_hash = i_previous_hash;
 			cout << "block " << index << " created " << time_stamp << endl;
 			// TODO : calculate hash of this block
+		}
+		
+		// destracutor
+		~Block(){
+			delete hash;
+			delete previous_hash;
+			delete time_stamp;
 		}
 		
 		void displayMyHash()
@@ -85,10 +93,7 @@ int main()
 	Transaction *PTrnsction = new Transaction(100.00, "sol", "eth");
 	
 	cout << PTrnsction->getTransactionAmount() << endl;
-	
-	
 	Block transactionBlock;
-	
 	transactionBlock.displayMyHash();
 	
 	delete PTrnsction;
