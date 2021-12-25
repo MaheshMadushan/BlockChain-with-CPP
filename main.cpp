@@ -4,33 +4,35 @@
 
 using namespace std;
 
+
 class Block
 {
 	private:
-//		static long long index = 0;
+		
 		string *hash;
 		string *previous_hash;
 		
-		// current date/time based on current system - should change
-		time_t now;
+		// current date/time based on current system - should change to checking with www
+		time_t time_stamp;
 		
 	public :
-		
+		static unsigned long long index;
 		// for implementation purposes
 		Block(){
-//			index++;
-			this->now = time(0);
+			index++;
+			this->time_stamp = time(0);
+			cout << "block " << index << " created " << time_stamp << endl;
 		}
 		
-		Block(string previous_hash)
+		Block(string i_previous_hash)
 		{
 			// allcate mem dynamically to hash n previous_hash
 			hash = new string;
 			previous_hash = new string;
-//			index++;
-			this->now = time(0);
-			*previous_hash = previous_hash;
-			cout << "block " << index << " created" << endl;
+			index++;
+			this->time_stamp = time(0);
+			*previous_hash = i_previous_hash;
+			cout << "block " << index << " created " << time_stamp << endl;
 			// TODO : calculate hash of this block
 		}
 		
@@ -39,6 +41,9 @@ class Block
 			cout << hash << endl;
 		}
 };
+
+// initializing static member in blockchain
+unsigned long long Block::index = 0;
 
 class Transaction{
 	
