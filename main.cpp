@@ -1,57 +1,11 @@
 #include <iostream>
 #include <string>
-#include "md5.h"
+//#include "md5.h"
 #include <ctime>
 
 using namespace std;
 
-class Block
-{
-	private:
-		
-		string *hash;
-		string *previous_hash;
-		
-		// current date/time based on current system - should change to checking with www
-		time_t time_stamp;
-		
-	public :
-		static unsigned long long index;
-		// for implementation purposes
-		Block(){
-			index++;
-			this->time_stamp = time(0);
-			cout << "block " << index << " created " << time_stamp << endl;
-		}
-		
-		// constructor
-		Block(string i_previous_hash)
-		{
-			// allcate mem dynamically to hash n previous_hash
-			hash = new string;
-			previous_hash = new string;
-			this->time_stamp = time(0);
-			index++;
-			*previous_hash = i_previous_hash;
-			cout << "block " << index << " created " << time_stamp << endl;
-			// TODO : calculate hash of this block
-		}
-		
-		// destracutor
-		~Block(){
-			delete hash;
-			delete previous_hash;
-			delete time_stamp;
-		}
-		
-		void displayMyHash()
-		{
-			cout << hash << endl;
-		}
-};
-
-// initializing static member in blockchain
-unsigned long long Block::index = 0;
+#include "Block.cpp"
 
 class Transaction{
 	
