@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#include "Block.cpp"
+#include "Block.h"
 
 class Transaction{
 	

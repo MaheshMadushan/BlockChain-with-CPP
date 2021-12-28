@@ -8,17 +8,17 @@ using namespace std;
 // for implementation purposes
 Block :: Block(){
 	index++;
-	*time_stamp = time(0);
+	time_stamp = time(0);
 	cout << "block " << index << " created " << time_stamp << endl;
 }
 
 // constructor
 Block :: Block(string i_previous_hash)
 {
-	// allcate mem dynamically to hash n previous_hash
+	// allocate mem dynamically to hash n previous_hash
 	hash = new string;
 	previous_hash = new string;
-	*time_stamp = time(0);
+	time_stamp = time(0);
 	
 	// count of the block	
 	index++;
@@ -31,12 +31,11 @@ Block :: Block(string i_previous_hash)
 Block :: ~Block(){
 	delete hash;
 	delete previous_hash;
-	delete time_stamp;
 }
 
 void Block :: displayMyHash()
 {
-	cout << this->hash << endl;
+	cout <<  this->hash << endl;
 }
 
 // initializing static member in blockchain

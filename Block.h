@@ -15,7 +15,7 @@ class Block
 		string *previous_hash;
 		
 		// current date/time based on current system - should change to checking with www
-		time_t *time_stamp;
+		time_t time_stamp;
 		
 	public :
 		static unsigned long long index;
