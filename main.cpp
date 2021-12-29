@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-//#include "md5.h"
 #include <ctime>
 
 using namespace std;
