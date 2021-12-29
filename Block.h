@@ -1,9 +1,16 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
+
+
+
+
+
 #include <iostream>
 #include <string>
 #include <ctime>
+
+// should have nonce
 
 using namespace std;
 class Block
