@@ -1,12 +1,13 @@
-#include "clib/cryptlib.h"
-#include "clib/md5.h" // from https://cryptopp.com/
+#ifndef HASH_H
+#define HASH_H
+
 #include <iostream>
 #include <string>
 
 using namesapce std;
 
 class Hash {
-	private:
+	protected:
 		string *data;
 		string *hash;
 		
@@ -17,3 +18,5 @@ class Hash {
 		void addData(string *data);
 		string getHash();
 };
+
+#endif // HASH_H
