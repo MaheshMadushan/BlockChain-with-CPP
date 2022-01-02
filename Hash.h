@@ -7,7 +7,7 @@
 using namesapce std;
 
 class Hash {
-	protected:
+	private:
 		string *data;
 		string *hash;
 		
