@@ -17,6 +17,7 @@ class Hash {
 		
 		void addData(string *data);
 		string getHash();
+		void setData(string *data);
 };
 
 #endif // HASH_H
