@@ -32,3 +32,8 @@
 *.app
 
 clib/
+.vscode/c_cpp_properties.json
+.gitignore
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
