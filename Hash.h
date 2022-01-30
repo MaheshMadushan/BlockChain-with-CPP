@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-using namesapce std;
+using namespace std;
 
 class Hash {
 	private:
