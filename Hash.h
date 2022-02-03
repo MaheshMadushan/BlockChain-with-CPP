@@ -8,16 +8,16 @@ using namespace std;
 
 class Hash {
 	private:
-		string *data;
-		string *hash;
+		std::string *data;
+		std::string *hash;
 		
 	public:
 		Hash();
-		Hash(string *data);
+		Hash(std::string *data);
 		
-		void addData(string *data);
-		string getHash();
-		void setData(string *data);
+		void addData(std::string *data);
+		std::string getHash();
+		void setData(std::string *data);
 };
 
 #endif // HASH_H

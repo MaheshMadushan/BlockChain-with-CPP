@@ -7,11 +7,11 @@
 
 // using namespace std;
 
-MD5::addData(string* data){
+MD5::addData(std::string* data){
 	this->data = data;
 };
 
-MD5::Hash(string *data){
+MD5::Hash(std::string* data){
 	this->data = data;
 };
 
