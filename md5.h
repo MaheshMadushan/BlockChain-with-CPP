@@ -7,8 +7,8 @@
 
 class MD5 : public Hash
 {
-	MD5() : Hash::Hash();
-	MD5(std::string *data) : Hash(data);
+	MD5() : Hash(){};
+	MD5(std::string *data) : Hash(data){};
 }; 
 
 #endif // MD5_H
