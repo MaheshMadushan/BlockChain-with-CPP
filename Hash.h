@@ -7,13 +7,15 @@
 using namespace std;
 
 class Hash {
-	private:
+	protected:
 		std::string *data;
 		std::string *hash;
 		
 	public:
 		Hash();
-		Hash(std::string *data);
+		Hash(std::string *data){
+			this->data = data;
+		};
 		
 		void addData(std::string *data);
 		std::string getHash();
