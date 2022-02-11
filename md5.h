@@ -5,15 +5,19 @@
 #include <string>
 #include "Hash.h"
 
+#include "clib/cryptlib.h"
+#define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
+#include "clib/md5.h"
 
-using namespace std;
-
+using namespace CryptoPP;
 class MD5 : public Hash
 {
+	private:
+		Weak::MD5 hash;
 	MD5() : Hash(){};
 	MD5(string *data) : Hash(data){};
 	void addData(string* data);
-	void MD5::setData(string* data);
+	void setData(string* data);
 }; 
 
 #endif // MD5_H
