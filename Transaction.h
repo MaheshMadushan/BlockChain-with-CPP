@@ -2,6 +2,7 @@
 #define TRANSACTION_H
 #include <string>
 
+using namespace std;
 class Transaction
 {
 

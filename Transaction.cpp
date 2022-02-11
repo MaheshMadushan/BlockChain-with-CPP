@@ -1,4 +1,4 @@
-#include <Transaction.h>
+#include "Transaction.h"
 #include <string>
 #include <iostream>
 
@@ -25,5 +25,5 @@ void Transaction :: setAmount(double amount)
 
 double Transaction ::getTransactionAmount()
 {
-    return Transaction ::amount;
+    return Transaction :: amount;
 }
