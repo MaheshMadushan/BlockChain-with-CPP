@@ -5,6 +5,8 @@
 #include <memory>
 using namespace std;
 #include "Block.h"
+#include "Hash.h"
+#include "md5.h"
 
 // for debugging of new (this is overloaded new) (logger for new)
 // overloaded new and delete for logging
@@ -35,11 +37,17 @@ int main()
 	{
 		// use shared_ptr instead of new (it deletes when ptr no longer in use)
 		Transaction *PTrnsction = new Transaction(100.00, "sol", "eth");
-		std::shared_ptr<Transaction> spTransaction = std::make_shared<Transaction>(100.00, "sol", "eth");
+		shared_ptr<Transaction> spTransaction = make_shared<Transaction>(100.00, "sol", "eth");
 		cout << PTrnsction->getTransactionAmount() << endl;
 		Block transactionBlock;
 		transactionBlock.displayMyHash();
+		string string_data = "jibberish";
+		Hash *md5;
+		MD5 s(&string_data);
+		md5 = &s;
+		md5->getHash();
 		delete PTrnsction;
+
 		return 0;
 	}
 	catch (const bad_alloc &e)

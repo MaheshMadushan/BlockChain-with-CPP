@@ -17,9 +17,9 @@ class Hash {
 			this->data = data;
 		};
 		
-		void addData(std::string *data);
-		std::string getHash();
-		void setData(std::string *data);
+		virtual void addData(std::string *data) = 0;
+		virtual void getHash() = 0;
+		virtual void setData(std::string *data) = 0;
 };
 
 #endif // HASH_H

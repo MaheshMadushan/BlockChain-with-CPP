@@ -6,9 +6,9 @@ CC       = gcc -D__DEBUG__
 WINDRES  = windres.exe
 OBJ      = main.o Block.o Transaction.o md5.o
 LINKOBJ  = main.o Block.o Transaction.o md5.o
-# LIBS     = -L"G:/Dev-Cpp/MinGW64/lib" -L"G:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
-# INCS     = -I"G:/Dev-Cpp/MinGW64/include" -I"G:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"G:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-# CXXINCS  = -I"G:/Dev-Cpp/MinGW64/include" -I"G:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"G:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"G:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+LIBS     = -L"G:/Dev-Cpp/MinGW64/lib" -L"G:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -L"/mnt/g/Blockchain-implementation/clib" -static-libgcc -lcryptopp -lpthread -g3
+INCS     = -I"G:/Dev-Cpp/MinGW64/include" -I"G:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"G:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"G:/Dev-Cpp/MinGW64/include" -I"G:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"G:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"G:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = blockchain
 CXXFLAGS = $(CXXINCS) -g3
 CFLAGS   = $(INCS) -g3
@@ -33,5 +33,5 @@ Block.o: Block.cpp
 Transaction.o: Transaction.cpp
 	$(CPP) -c Transaction.cpp -o Transaction.o $(CXXFLAGS)
 
-md5.o: Transaction.cpp
+md5.o: md5.cpp
 	$(CPP) -c md5.cpp -o md5.o $(CXXFLAGS)

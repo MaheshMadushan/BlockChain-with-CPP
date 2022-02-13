@@ -14,10 +14,14 @@ class MD5 : public Hash
 {
 	private:
 		Weak::MD5 hash;
-	MD5() : Hash(){};
-	MD5(string *data) : Hash(data){};
-	void addData(string* data);
-	void setData(string* data);
+		string data_digest;
+
+	public:
+		MD5() : Hash(){};
+		MD5(string *data) : Hash(data){};
+		void addData(string* data);
+		void setData(string* data);
+		void getHash();
 }; 
 
 #endif // MD5_H
