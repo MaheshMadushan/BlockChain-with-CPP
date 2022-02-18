@@ -6,7 +6,10 @@
 
 // should have nonce
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
+
 class Block
 {
 	private:

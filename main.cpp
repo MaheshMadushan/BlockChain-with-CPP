@@ -8,6 +8,9 @@ using namespace std;
 #include "Hash.h"
 #include "md5.h"
 
+using std::string;
+using std::cout;
+using std::endl;
 // for debugging of new (this is overloaded new) (logger for new)
 // overloaded new and delete for logging
 
@@ -54,9 +57,9 @@ int main()
 		// use shared_ptr instead of new (it deletes when ptr no longer in use)
 		shared_ptr<Transaction> spTransaction = make_shared<Transaction>(100.00, "sol", "eth");
 
-		// Block transactionBlock;
+		Block transactionBlock;
 
-		// transactionBlock.displayMyHash();
+		transactionBlock.displayMyHash();
 
 		string string_data = "jibberish";
 		Hash *md5;

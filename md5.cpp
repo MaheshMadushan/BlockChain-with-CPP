@@ -2,10 +2,6 @@
 #include <string>
 #include <iostream>
 #include "clib/filters.h"
-
-using namespace std;
-
-
 #include "clib/hex.h"
 #include "clib/files.h"
 

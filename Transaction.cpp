@@ -1,9 +1,6 @@
 #include "Transaction.h"
-#include <string>
-#include <iostream>
 
 // class for transaction template
-using namespace std;
 
 Transaction ::Transaction(double a, string o, string b)
 {

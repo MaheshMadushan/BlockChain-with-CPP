@@ -10,6 +10,9 @@
 #include "clib/md5.h"
 
 using namespace CryptoPP;
+using std::string;
+using std::cout;
+using std::endl;
 class MD5 : public Hash
 {
 	private:

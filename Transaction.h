@@ -1,8 +1,13 @@
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
 #include <string>
+#include <string>
+#include <iostream>
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
+
 class Transaction
 {
 

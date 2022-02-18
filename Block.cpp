@@ -3,7 +3,6 @@
 #include <string>
 #include <ctime>
 
-using namespace std;
 
 // for implementation purposes
 Block :: Block(){
@@ -16,8 +15,8 @@ Block :: Block(){
 Block :: Block(string i_previous_hash)
 {
 	// allocate mem dynamically to hash n previous_hash
-	hash = new string;
-	previous_hash = new string;
+	hash = new string();
+	previous_hash = new string();
 	time_stamp = time(0);
 	
 	// count of the block	
@@ -29,6 +28,7 @@ Block :: Block(string i_previous_hash)
 
 // destructor
 Block :: ~Block(){
+	cout << hash << endl;
 	delete hash;
 	delete previous_hash;
 }
