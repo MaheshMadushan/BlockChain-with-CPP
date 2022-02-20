@@ -4,22 +4,22 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::string;
 
 class Hash {
 	protected:
-		std::string *data;
-		std::string *hash;
+		string *data;
+		string *hash;
 		
 	public:
 		Hash();
-		Hash(std::string *data){
+		Hash(string *data){
 			this->data = data;
 		};
 		
-		virtual void addData(std::string *data) = 0;
-		virtual void getHash() = 0;
-		virtual void setData(std::string *data) = 0;
+		virtual void addData(string *data) = 0;
+		virtual string getHash() = 0;
+		virtual void setData(string *data) = 0;
 };
 
 #endif // HASH_H
