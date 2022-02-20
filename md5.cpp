@@ -1,9 +1,11 @@
 #include "md5.h"
 #include <string>
 #include <iostream>
+#include <signal.h>
 #include "clib/filters.h"
 #include "clib/hex.h"
 #include "clib/files.h"
+#include "trap.h"
 
 // The HexEncoder encodes bytes into base 16 encoded data. The partner decoder is a HexDecoder.
 // A FileSink allows you to write data to a file using a BufferedTransformation
@@ -15,14 +17,16 @@
 HexEncoder encoder(new FileSink(std::cout));
 
 void MD5::addData(string *data){
+	BLOCKCHAIN_ASSERT(!(data == NULLPTR && (*data).size() > 0));
 	this->data = data;
 };
 
 void MD5::setData(string *data){
+	BLOCKCHAIN_ASSERT(!(data == NULLPTR && (*data).size() > 0));
 	this->data = data;
 }
 
-void MD5::getHash(){
+string MD5::getHash(){
 
 	std::cout << "Name: " << hash.AlgorithmName() << std::endl;
     std::cout << "Digest size: " << hash.DigestSize() << std::endl;
@@ -36,4 +40,6 @@ void MD5::getHash(){
 	std::cout << "Digest: " ;
 	StringSource(data_digest, true, new Redirector(encoder));
 	std::cout << std::endl;
+
+	return this->data_digest;
 }

@@ -13,6 +13,7 @@ using namespace CryptoPP;
 using std::string;
 using std::cout;
 using std::endl;
+
 class MD5 : public Hash
 {
 	private:
@@ -24,7 +25,7 @@ class MD5 : public Hash
 		MD5(string *data) : Hash(data){};
 		void addData(string* data);
 		void setData(string* data);
-		void getHash();
+		string getHash();
 }; 
 
 #endif // MD5_H

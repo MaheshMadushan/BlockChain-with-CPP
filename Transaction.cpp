@@ -1,5 +1,6 @@
 #include "Transaction.h"
 
+
 // class for transaction template
 
 Transaction ::Transaction(double a, string o, string b)

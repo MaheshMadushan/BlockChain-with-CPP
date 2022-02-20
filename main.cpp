@@ -57,16 +57,17 @@ int main()
 		// use shared_ptr instead of new (it deletes when ptr no longer in use)
 		shared_ptr<Transaction> spTransaction = make_shared<Transaction>(100.00, "sol", "eth");
 
-		Block transactionBlock;
+		// Block transactionBlock;
 
-		transactionBlock.displayMyHash();
+		// transactionBlock.displayMyHash();
 
 		string string_data = "jibberish";
 		Hash *md5;
 		MD5 s(&string_data);
 		md5 = &s;
-		md5->getHash();
-
+		string hash = md5->getHash();
+	
+		cout << "hash for 'jibberish':" << hash << endl;
 
 		return 0;
 	}
