@@ -14,7 +14,7 @@ using std::endl;
 // for debugging of new (this is overloaded new) (logger for new)
 // overloaded new and delete for logging
 
-#ifdef __DEBUG__ /* only build with debug */
+#ifdef __DEBUG__ || __DEBUG || DEBUG /* only build with debug */
 
 void* operator new(size_t size, const char* file, int line){
 	std::string fullpath = file;
