@@ -12,7 +12,26 @@
 // TODO : create genesis block
 // TODO : data structure to keep blocks (prefer hash table for now)
 // TODO : create block
+using std::string;
+using std::deque;
+class Blockchain
+{
+private:
+    /* data */
+public:
+    Blockchain(){
+        deque<int> d;
+    }
+    ~Blockchain();
+};
 
+blockchain::blockchain(/* args */)
+{
+}
+
+blockchain::~blockchain()
+{
+}
 
 
 
