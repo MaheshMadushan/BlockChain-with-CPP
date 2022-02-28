@@ -1,6 +1,7 @@
 #include "Transaction.h"
 
 
+#include "trap.h"
 // class for transaction template
 
 Transaction ::Transaction(double a, string o, string b)
@@ -18,6 +19,7 @@ Transaction ::~Transaction()
 
 void Transaction :: setAmount(double amount)
 {
+    BLOCKCHAIN_ASSERT();
     this->amount = amount;
 }
 

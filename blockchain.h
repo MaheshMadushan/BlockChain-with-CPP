@@ -21,13 +21,13 @@ private:
     Hash *md5Hash;
 
 public:
-
+    // add functinality to dynamic changing of hash function at runtime (prefer factory pattern or find better pattern to implement the function)
     Blockchain(){
         Block gensisBlock = createGenisisBlock();
         blocks.push_back(gensisBlock);
     }
 
-
+    string 
     ~Blockchain();
 
 
