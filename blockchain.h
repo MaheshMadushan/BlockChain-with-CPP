@@ -4,32 +4,33 @@
 #include "Hash.h"
 #include "md5.h"
 
-
-
-
 // TODO : create genesis block
 // TODO : hash a block
 // TODO : create genesis block
 // TODO : data structure to keep blocks (prefer hash table for now)
 // TODO : create block
+
 using std::string;
 using std::deque;
 class Blockchain
 {
 private:
-    /* data */
+    deque<Block> blocks;
+    Block createGenisisBlock();
 public:
     Blockchain(){
-        deque<int> d;
+        Block gensisBlock = createGenisisBlock();
+        blocks.push_back(gensisBlock);
     }
+     
     ~Blockchain();
 };
 
-blockchain::blockchain(/* args */)
+Blockchain::Blockchain(/* args */)
 {
 }
 
-blockchain::~blockchain()
+Blockchain::~Blockchain()
 {
 }
 

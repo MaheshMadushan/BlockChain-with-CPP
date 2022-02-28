@@ -2,10 +2,19 @@
 # undef BLOCKCHAIN_DEBUG
 # define BLOCKCHAIN_DEBUG 1
 #endif
+
+
+
+
 // Unix and Linux platforms
 #if defined(__unix__) || defined(__MACH__) || defined(__NetBSD__) || defined(__sun)
 #define BLOCKCHAIN_UNIX_AVAILABLE
 #endif
+
+
+
+
+
 // Handle processes using signals
 // eg : pause a process
 // Cygwin/Newlib requires _XOPEN_SOURCE=600
