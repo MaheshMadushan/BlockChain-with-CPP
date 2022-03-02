@@ -27,7 +27,7 @@ public:
         blocks.push_back(gensisBlock);
     }
 
-    string 
+    // string 
     ~Blockchain();
 
 
