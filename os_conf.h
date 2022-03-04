@@ -11,10 +11,6 @@
 #define BLOCKCHAIN_UNIX_AVAILABLE
 #endif
 
-
-
-
-
 // Handle processes using signals
 // eg : pause a process
 // Cygwin/Newlib requires _XOPEN_SOURCE=600

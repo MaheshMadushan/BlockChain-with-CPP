@@ -19,7 +19,7 @@ Transaction ::~Transaction()
 
 void Transaction :: setAmount(double amount)
 {
-    BLOCKCHAIN_ASSERT();
+    BLOCKCHAIN_ASSERT(amount >= 0);
     this->amount = amount;
 }
 
